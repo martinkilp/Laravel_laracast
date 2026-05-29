@@ -5,14 +5,13 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello, World!</h1>
+    <h1>Contact</h1>
 
     <div>
-        <a href="/about">About Us</a>
-    </div>
-
-    <div>
-        <a href="/contact">Contact</a>
+        <h1>Name: Martin</h1>
+        <h1>Phone: 12345678</h1>
+        <h1>email: email@email.com</h1>
+        <a href="/">Return Home</a>
     </div>
 
 </body>
