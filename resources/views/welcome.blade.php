@@ -1,19 +1,6 @@
-<!
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <title>Document</title>
-</head>
-<body>
+<x-layout title="Home">
+
     <h1>Hello, World!</h1>
 
-    <div>
-        <a href="/about">About Us</a>
-    </div>
 
-    <div>
-        <a href="/contact">Contact</a>
-    </div>
-
-</body>
-</html>
+</x-layout>

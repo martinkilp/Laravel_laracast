@@ -1,18 +1,9 @@
-<!
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Contact</h1>
+<x-layout title="Contact Us">
 
-    <div>
-        <h1>Name: Martin</h1>
-        <h1>Phone: 12345678</h1>
-        <h1>email: email@email.com</h1>
-        <a href="/">Return Home</a>
-    </div>
+    <h1>Contact Us</h1>
 
-</body>
-</html>
+    <x-card class="max-w-400">
+        <p>Placeholder for the contact form</p>
+    </x-card>
+
+</x-layout>
