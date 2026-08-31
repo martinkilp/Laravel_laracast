@@ -1,9 +1,13 @@
 <x-layout title="Home">
 
-    <p>
+    @forelse($tasks as $task)
 
-        {{ $greeting }}, {{ $person }}!
+        <li>{{ $task }}</li>
 
-    </p>
+    @empty
+
+        <p>There no tasks.</p>
+
+    @endforelse
 
 </x-layout>

@@ -8,8 +8,14 @@ Route::get('/', function () {
     return view(
         'welcome',
         [
-            'greeting' => 'Hello',
-            'person' => Request('person', 'World'),
+            'tasks' =>
+            [
+            
+                'Go to the market',
+                'walk the dog',
+                'watch a video',
+            
+            ]
         ]
     );
 });
