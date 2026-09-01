@@ -1,21 +1,27 @@
+
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Laravel\Mcp\Request;
 
 Route::get('/', function () {
+    $ideas = session()->get('ideas', []);
+    return view('ideas', [
+        'ideas' => $ideas,
+    ]);
+});
 
-    return view(
-        'welcome',
-        [
-            'tasks' =>
-            [
-            
-                'Go to the market',
-                'walk the dog',
-                'watch a video',
-            
-            ]
-        ]
-    );
+
+Route::post('/ideas', function () {
+    $idea = request("idea");
+    session()->push('idea', $idea);
+    return redirect('/');
+});
+
+
+
+// Temporary
+
+Route::get('/delete-ideas', function () {
+    session()->forget('ideas');
+    return redirect('/');
 });
