@@ -1,10 +1,23 @@
 
 <?php
 
+use Illuminate\Container\Attributes\DB as AttributesDB;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
+use App\Models\Idea;
+
 
 Route::get('/', function () {
-    $ideas = session()->get('ideas', []);
+
+    $ideas = Idea::query()
+    ->when(request('state'), function ($query, $state) {
+    $query->where('state', $state);
+
+    })
+    ->get();
+
+
+
     return view('ideas', [
         'ideas' => $ideas,
     ]);
@@ -13,7 +26,14 @@ Route::get('/', function () {
 
 Route::post('/ideas', function () {
     $idea = request("idea");
-    session()->push('idea', $idea);
+
+    Idea::create([
+
+    'description' => request('idea'),
+    'state' => 'pending',
+
+    ]);
+
     return redirect('/');
 });
 

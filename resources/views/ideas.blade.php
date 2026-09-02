@@ -19,7 +19,7 @@
     </form>
 
 
-    @if (count($ideas))
+    @if ($ideas->count())
 
     <div class="mt-6 text-white">
 
@@ -29,7 +29,7 @@
 
             @foreach($ideas as $idea)
 
-            <li class="text-sm">{{ $idea }}</li>
+            <li class="text-sm">{{ $idea->description }}</li>
 
             @endforeach
 
