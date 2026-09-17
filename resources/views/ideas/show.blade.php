@@ -1,15 +1,10 @@
 <x-layout>
 
-    <div class="mt-6 text-white">
+    <div class="card bg-neutral p-6">
 
-        <h2 class="font-bold">Your Ideas</h2>
-
-        <div class="mt-6">
-
+        <div>
             {{ $idea->description }}
-
         </div>
-
 
         <div class="mt-6">
 
